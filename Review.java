@@ -1,8 +1,12 @@
 /**
  * 책에 대한 리뷰
  */
+
+import java.util.*;
+
 public class Review {
 	private int reviewId;	// 리뷰 구분 id
+	private String title;	// 리뷰 제목
 	private String nickname; // 작성자(닉네임 사용)
 	private int stars; 	// 별점
 	private String level;	// 난이도 (초급 : 중급 : 고급)
@@ -11,13 +15,15 @@ public class Review {
 	private String keyword;	// 책 키워드 
 	private String onelineReview;	// 한줄평
 	private String multilineReview;	// 상세 리뷰
+	private Date createDate;	//리뷰 생성 날짜
 
 	public Review() { }
 	
-	public Review(int reviewId, String nickname, int stars, 
+	public Review(int reviewId, String title, String nickname, int stars, 
 			String level, String purpose, String recommend_object, 
-			String keyword, String onelineReview, String multilineReview) {
+			String keyword, String onelineReview, String multilineReview, Date createDate) {
 		this.reviewId = reviewId;
+		this.title = title;
 		this.nickname = nickname;
 		this.stars = stars;
 		this.level = level;
@@ -26,6 +32,7 @@ public class Review {
 		this.keyword = keyword;
 		this.onelineReview = onelineReview;
 		this.multilineReview = multilineReview;
+		this.createDate = createDate;
 	}
 
 	public int getReviewId() {
@@ -34,6 +41,14 @@ public class Review {
 
 	public void setReviewId(int reviewId) {
 		this.reviewId = reviewId;
+	}
+	
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
 	}
 	
 	public String getNickname() {
@@ -98,5 +113,13 @@ public class Review {
 
 	public void setMultilineReview(String multilineReview) {
 		this.multilineReview = multilineReview;
+	}
+	
+	public Date getCreateDate() {
+		return createDate;
+	}
+
+	public void setCreateDate(Date createDate) {
+		this.createDate = createDate;
 	}
 }
