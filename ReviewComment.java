@@ -3,15 +3,15 @@
  */
 import java.util.*;
 
-public class Comment {
+public class ReviewComment {
 	private int commentId;	// 리뷰 댓글 구분 id
 	private String nickname; // 작성자(닉네임 사용)
 	private String rContent;	// 리뷰 댓글 내용
 	private Date createDate;	// 래뷰 댓글 작성 날짜
 
-	public Comment() { }
+	public ReviewComment() { }
 	
-	public Comment(int commentId, String nickname, 
+	public ReviewComment(int commentId, String nickname, 
 			String rContent, Date createDate) {
 		this.commentId = commentId;
 		this.nickname = nickname;
