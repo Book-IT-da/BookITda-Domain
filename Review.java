@@ -11,7 +11,7 @@ public class Review {
 	private int stars; 	// 별점
 	private String level;	// 난이도 (초급 : 중급 : 고급)
 	private String purpose;	// 독서 목적
-	private String recommend_object;	// 추천 대상
+	private String recommObj;	// 추천 대상
 	private String keyword;	// 책 키워드 
 	private String onelineReview;	// 한줄평
 	private String multilineReview;	// 상세 리뷰
@@ -20,7 +20,7 @@ public class Review {
 	public Review() { }
 	
 	public Review(int reviewId, String title, String nickname, int stars, 
-			String level, String purpose, String recommend_object, 
+			String level, String purpose, String recommObj, 
 			String keyword, String onelineReview, String multilineReview, Date createDate) {
 		this.reviewId = reviewId;
 		this.title = title;
@@ -28,7 +28,7 @@ public class Review {
 		this.stars = stars;
 		this.level = level;
 		this.purpose = purpose;
-		this.recommend_object = recommend_object;
+		this.recommObj = recommObj;
 		this.keyword = keyword;
 		this.onelineReview = onelineReview;
 		this.multilineReview = multilineReview;
@@ -83,12 +83,12 @@ public class Review {
 		this.purpose = purpose;
 	}
 
-	public String getRecommendObject() {
-		return recommend_object;
+	public String getRecommObj() {
+		return recommObj;
 	}
 
-	public void setRecommendObject(String recommend_object) {
-		this.recommend_object = recommend_object;
+	public void setRecommObj(String recommObj) {
+		this.recommObj = recommObj;
 	}
 
 	public String getKeyword() {
