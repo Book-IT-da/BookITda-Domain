@@ -1,80 +1,89 @@
-// Q&A 게시판 관리
+package service.dto;
+
+import java.util.Date;
+
 public class Question {
-	private int bId; // Q&A 게시판 항목 번호
-	private String title; // 제목
-	private String type; // 질문 글 유형
-	private String nickname; // 작성자(닉네임 사용)
-	private String date; // 글 작성한 시간
-	private int views; // 조회수
-	private String questionContent; // 질문 글 내용
-	
-	public Question() { }
-	
-	public Question(int bId, String title, String type, String nickname, 
-			String date, int views, String questionContent) {
-		this.bId = bId;
-		this.title = title;
-		this.type = type;
-		this.nickname = nickname;
-		this.date = date;
-		this.views = views;
-		this.questionContent = questionContent;
-	}
-	 
-	public int getBId() {
-		return bId;
-	}
+    private int qId;
+//    private String qType;
+    private String title;
+    private String qContent;
+    private int views; 
+    private String userId;
+    private String nickname;
+    private Date createDate;
+    
+    public Question() { }
 
-	public void setBId(int bId) {
-		this.bId = bId;
-	}
+    public Question(int qId, String title, String qContent, int views, String userId, Date createDate) {
+        super();
+        this.qId = qId;
+        this.title = title;
+        this.qContent = qContent;
+        this.views = views;
+        this.userId = userId;
+        this.createDate = createDate;
+    }
+    
+    public Question(int qId, String title, int views, String nickname, Date createDate) {
+        super();
+        this.qId = qId;
+        this.title = title;
+        this.views = views;
+        this.nickname = nickname;
+        this.createDate = createDate;
+    }
 
-	public String getTitle() {
-		return title;
-	}
+    public int getqId() {
+        return qId;
+    }
 
-	public void setTitle(String title) {
-		this.title = title;
-	}
+    public void setqId(int qId) {
+        this.qId = qId;
+    }
 
-	public String getType() {
-		return type;
-	}
+    public String getTitle() {
+        return title;
+    }
 
-	public void setType(String type) {
-		this.type = type;
-	}
+    public void setTitle(String title) {
+        this.title = title;
+    }
 
-	public String getNickname() {
-		return nickname;
-	}
+    public String getqContent() {
+        return qContent;
+    }
 
-	public void setNickname(String nickname) {
-		this.nickname = nickname;
-	}
-	
-	public String getDate() {
-		return date;
-	}
+    public void setqContent(String qContent) {
+        this.qContent = qContent;
+    }
 
-	public void setDate(String date) {
-		this.date = date;
-	}
+    public int getViews() {
+        return views;
+    }
 
-	public int getViews() {
-		return views;
-	}
+    public void setViews(int views) {
+        this.views = views;
+    }
 
-	public void setViews(int views) {
-		this.views = views;
-	}
+    public String getUserId() {
+        return userId;
+    }
 
-	public String getQuestionContent() {
-		return questionContent;
-	}
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
 
-	public void setQuestionContent(String questionContent) {
-		this.questionContent = questionContent;
-	}
+    public Date getCreateDate() {
+        return createDate;
+    }
 
+    public void setCreateDate(Date createDate) {
+        this.createDate = createDate;
+    }
+
+    @Override
+    public String toString() {
+        return "Question [qId=" + qId + ", title=" + title + ", qContent=" + qContent + ", views=" + views + ", userId="
+                + userId + ", createDate=" + createDate + "]";
+    }
 }
