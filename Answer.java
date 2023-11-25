@@ -30,6 +30,13 @@ public class Answer {
         this.createDate = createDate;
     }
 
+    public Answer(int aId, String answer, Date createDate) {
+        super();
+        this.aId = aId;
+        this.answer = answer;
+        this.createDate = createDate;
+    }
+
     public int getaId() {
         return aId;
     }
