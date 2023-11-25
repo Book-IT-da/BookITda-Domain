@@ -4,7 +4,6 @@ import java.util.Date;
 
 public class Question {
     private int qId;
-//    private String qType;
     private String title;
     private String qContent;
     private int views; 
@@ -30,6 +29,13 @@ public class Question {
         this.title = title;
         this.views = views;
         this.nickname = nickname;
+        this.createDate = createDate;
+    }
+
+    public Question(int qId, String title, Date createDate) {
+        super();
+        this.qId = qId;
+        this.title = title;
         this.createDate = createDate;
     }
 
